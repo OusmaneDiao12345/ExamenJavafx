@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GridPane fx:id="root" xmlns:fx="http://javafx.com/fxml" fx:controller="com.boutique.controller.CommandeController">
+    <!-- Client Information -->
+    <HBox spacing="10">
+        <TextField fx:id="tfTelephone" promptText="Téléphone"/>
+        <Button text="Rechercher" onAction="#onSearchClient"/>
+    </HBox>
+    <VBox>
+        <TextField fx:id="tfNom" promptText="Nom" editable="false"/>
+        <TextField fx:id="tfAdresse" promptText="Adresse" editable="false"/>
+    </VBox>
+
+    <!-- Articles -->
+    <TableView fx:id="tableArticles">
+        <columns>
+            <TableColumn text="Article"/>
+            <TableColumn text="Prix"/>
+            <TableColumn text="Quantité"/>
+            <TableColumn text="Montant"/>
+        </columns>
+    </TableView>
+
+    <!-- Commande Actions -->
+    <HBox spacing="10">
+        <Button text="Ajouter" onAction="#onAddArticle"/>
+        <Button text="Supprimer" onAction="#onRemoveArticle"/>
+        <Button text="Valider la Commande" onAction="#onValidateCommande"/>
+    </HBox>
+</GridPane>
